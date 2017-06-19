@@ -8,6 +8,7 @@ import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { UserComponent } from './user/user.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -19,7 +20,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    CampgroundListComponent
+    CampgroundListComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
