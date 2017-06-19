@@ -9,6 +9,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { UserComponent } from './user/user.component';
+import { CampgroundDetailComponent } from './campground-detail/campground-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     CampgroundListComponent,
-    UserComponent
+    UserComponent,
+    CampgroundDetailComponent
   ],
   imports: [
     BrowserModule,
