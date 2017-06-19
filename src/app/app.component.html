@@ -2,6 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" routerLink="">Home</a>
+      <a class="navbar-brand" routerLink="user">User</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <!-- <li><a routerLink="about">About Us</a></li>
@@ -15,12 +16,7 @@
   <h1> Camp Search </h1>
   <p class="project-description"> search campsites</p>
 </div>
-
-
-<div class="container">
-  <app-campground-list></app-campground-list>
-</div>
-
+<router-outlet></router-outlet>
 
 <footer class="footer">
   <div class="container">
