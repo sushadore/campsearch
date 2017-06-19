@@ -5,18 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CampgroundListComponent } from './campground-list/campground-list.component';
 import { routing } from './app.routing';
-import { masterFirebaseConfig } from './api-keys';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { UserComponent } from './user/user.component';
 import { CampgroundDetailComponent } from './campground-detail/campground-detail.component';
 
-export const firebaseConfig = {
-  apiKey: masterFirebaseConfig.apiKey,
-  authDomain: masterFirebaseConfig.authDomain,
-  databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket
-};
 
 @NgModule({
   declarations: [
@@ -30,8 +21,6 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
