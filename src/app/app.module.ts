@@ -10,7 +10,8 @@ import { UserService } from './user.service';
 import { CampgroundDetailComponent } from './campground-detail/campground-detail.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { masterFirebaseConfig } from './api-keys'
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,7 +35,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
