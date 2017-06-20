@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user.model';
-import { Observable } from 'rxjs/Observable';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
+// import { Observable } from 'rxjs/Observable';
+// import { AngularFireAuth } from 'angularfire2/auth';
+// import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-user',
@@ -11,17 +11,17 @@ import * as firebase from 'firebase/app';
 })
 export class UserComponent {
 
-  user: Observable<firebase.User>;
-
-  constructor(public afAuth: AngularFireAuth) {
-    this.user = afAuth.authState;
-  }
-
-  login() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-  }
-
-  logout() {
-    this.afAuth.auth.signOut();
-  }
+  // user: Observable<firebase.User>;
+  //
+  // constructor(public afAuth: AngularFireAuth) {
+  //   this.user = afAuth.authState;
+  // }
+  //
+  // login() {
+  //   this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  // }
+  //
+  // logout() {
+  //   this.afAuth.auth.signOut();
+  // }
 }
