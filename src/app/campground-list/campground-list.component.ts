@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CampgroundService } from './../campground.service';
 
-import xml2js from 'xml2js';
-
 @Component({
   selector: 'app-campground-list',
   templateUrl: './campground-list.component.html',
@@ -20,12 +18,9 @@ export class CampgroundListComponent implements OnInit {
   }
 
   getCamps() {
-    let returnedCamps = this.cs.getCampsApi(this.apiUrlSearch);
-
-    xml2js.parseString( returnedCamps.text(), (err, result) => {
-      this.camps = result.resultset.result; // JSON object!
+    this.cs.getCampsApi(this.apiUrlSearch).subscribe(data => {
+      this.camps = data;
     });
-    console.log(this.camps);
   }
 
 }
