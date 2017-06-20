@@ -19,9 +19,7 @@ export class CampgroundListComponent implements OnInit {
 
   getCamps() {
     this.cs.getCampsApi(this.apiUrlSearch).subscribe(data => {
-      console.log('data: ', data);
       this.camps = data;
-      console.log(this.camps);
     });
   }
 
