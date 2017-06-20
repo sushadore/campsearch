@@ -10,7 +10,10 @@ import { UserService } from './user.service';
 import { CampgroundDetailComponent } from './campground-detail/campground-detail.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { masterFirebaseConfig } from './api-keys'
+import { masterFirebaseConfig } from './api-keys';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +27,8 @@ export const firebaseConfig = {
     AppComponent,
     CampgroundListComponent,
     UserComponent,
-    CampgroundDetailComponent
+    CampgroundDetailComponent,
+    GoogleMapsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,10 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+ apiKey: 'AIzaSyDa2NwAvPw1VD5GVqZjUbt7O24ufhoazds'
+ })
   ],
   providers: [],
   bootstrap: [AppComponent]
