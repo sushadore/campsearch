@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -10,7 +10,10 @@ import { UserService } from './user.service';
 import { CampgroundDetailComponent } from './campground-detail/campground-detail.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { masterFirebaseConfig } from './api-keys'
+import { masterFirebaseConfig, googleMapsConfig } from './api-keys';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +27,8 @@ export const firebaseConfig = {
     AppComponent,
     CampgroundListComponent,
     UserComponent,
-    CampgroundDetailComponent
+    CampgroundDetailComponent,
+    GoogleMapsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +36,13 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+      apiKey: googleMapsConfig.apiKey
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
