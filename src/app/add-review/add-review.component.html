@@ -1,3 +1,31 @@
-<p>
-  add-review works!
-</p>
+<h2>New review</h2>
+<div class="row">
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label>Campground Name</label>
+      <input class="form-control" placeholder="Name" #newName>
+    </div>
+    <div class="form-group">
+      <label>Review</label>
+      <input class="form-control" placeholder="Review" #newReviews>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-2">
+    <div class="form-group">
+      <label>Rating</label>
+      <select class="form-control" #newRating>
+        <option value="1"><span>&#9733;</span></option>
+        <option value="2"><span>&#9733;</span><span>&#9733;</span></option>
+        <option value="3"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></option>
+        <option value="4"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></option>
+        <option value="5"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></option>
+      </select>
+
+  <br><button class="btn"(click)="newName.value=''; newReviews.value=''; newRating.value=''">Submit Review</button>
+</div>
+</div>
+
+
+<!-- (click)="submitForm(newName.value, newReviews.value, newRating.value)" -->

@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * add dispensaries
   * add hot springs
   * weather API
+  * add GIT hub login and maybe even effbook
 
 ## Development server
 
