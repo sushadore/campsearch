@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./google-maps.component.css']
 })
 export class GoogleMapsComponent implements OnInit {
-  title: string = 'My first angular2-google-maps project';
-  lat1: number = 51.531826;
-  lng1: number = -0.124391;
-  lat2: number = 51.511899;
-  lng2: number = -0.123270;
+  title: string = 'mapit';
+  lat1: number = 43.8041;
+  lng1: number = -120.5542;
+  // lat2: number = 51.511899;
+  // lng2: number = -0.123270;
 
   constructor() { }
 
