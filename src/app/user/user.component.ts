@@ -5,6 +5,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { UserService } from '../user.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -16,7 +17,11 @@ export class UserComponent implements OnInit {
   users: FirebaseListObservable<any[]>;
   user: Observable<firebase.User>;
 
-  constructor(public afAuth: AngularFireAuth, private userService: UserService) {
+  constructor(
+    public afAuth: AngularFireAuth,
+    private userService: UserService,
+    private router: Router
+  ) {
     this.user = afAuth.authState;
   }
 
@@ -29,6 +34,8 @@ export class UserComponent implements OnInit {
   }
   login() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    // send to new-review page if logged in using:
+    this.router.navigate(['add-review']);
   }
 
   logout() {

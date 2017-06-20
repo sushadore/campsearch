@@ -12,6 +12,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AddReviewComponent } from './add-review/add-review.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     AppComponent,
     CampgroundListComponent,
     UserComponent,
-    CampgroundDetailComponent
+    CampgroundDetailComponent,
+    AddReviewComponent
   ],
   imports: [
     BrowserModule,
