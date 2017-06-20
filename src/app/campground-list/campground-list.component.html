@@ -1,6 +1,13 @@
 <h2> Camgrounds matching your criteria </h2>
 <!-- <div *ngFor="let member of members | async" (click)="goToDetailPage(member)"> -->
-  <div class="panel-body">
-    <!-- <img class="profile-pic" src="{{member.image}}">
-    <h3><em>{{member.name}}</em> from {{member.organization}}</h3> -->
+<div class="container">
+  <button (click)="getCamps()">Click</button>
+  <div class="panel-body" *ngFor="let camp of camps">
+    <h2>{{camp.$.facilityName}}</h2>
+    <h3>ID: {{camp.$.facilityID}}</h3>
+    <h3>Lat: {{camp.$.latitude}}</h3>
+    <h3>Lng: {{camp.$.longitude}}</h3>
+    <hr>
   </div>
+
+</div>
