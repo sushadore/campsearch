@@ -35,10 +35,8 @@ export class CampgroundService {
     return this.http.get(url).map(res => {
       let camp;
       xml2js.parseString( res.text(), (err, result) => {
-        console.log('result: ', result);
         camp = result.detailDescription; // JSON object!
       });
-      console.log('camp: ', camp)
       return camp;
     });
   }

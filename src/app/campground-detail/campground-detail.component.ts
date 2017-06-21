@@ -33,8 +33,8 @@ export class CampgroundDetailComponent implements OnInit {
       campgroundId
     ).subscribe(data => {
       this.campDetail = data;
+      console.log('campDetail: ', this.campDetail);
     });
-    console.log('campDetail: ', this.campDetail);
   }
 
 }

@@ -23,7 +23,6 @@ export class CampgroundListComponent implements OnInit {
   }
 
   getCampDetail(campCode: string, campId: string) {
-    console.log('clicked');
     this.router.navigate(['campgrounds', campCode, campId])
   }
 
