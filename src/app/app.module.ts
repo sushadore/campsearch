@@ -14,8 +14,9 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { masterFirebaseConfig, googleMapsConfig } from './api-keys';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
-import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AgmCoreModule } from '@agm/core'
 import { ReviewsComponent } from './reviews/reviews.component';
+import { BaseCampComponent } from './base-camp/base-camp.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     CampgroundDetailComponent,
     AddReviewComponent,
     GoogleMapsComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    BaseCampComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AgmCoreModule.forRoot({
-      apiKey: googleMapsConfig.apiKey
+      apiKey: googleMapsConfig.apiKey,
+      libraries: ['places']
     })
   ],
 

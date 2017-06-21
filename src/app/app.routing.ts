@@ -6,11 +6,12 @@ import { UserComponent } from './user/user.component';
 import { CampgroundDetailComponent }   from './campground-detail/campground-detail.component';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { GoogleMapsComponent }   from './google-maps/google-maps.component';
+import { BaseCampComponent }   from './base-camp/base-camp.component';
 
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: 'campgrounds',
     component: CampgroundListComponent
   },
   {
@@ -27,7 +28,11 @@ const appRoutes: Routes = [
    {
     path: 'map',
     component: GoogleMapsComponent
-  }
+  },
+  {
+   path: '',
+   component: BaseCampComponent
+ }
  ];
 
 NgModule({

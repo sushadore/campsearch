@@ -1,5 +1,40 @@
+.footer {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+nav {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 600;
+}
+
 .jumbotron {
+  font-family: 'Amatic SC', cursive;
+  margin: 0;
   text-align: center;
+}
+
+.jumbotron h1 {
+  letter-spacing: 3px;
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.jumbotron p {
+  letter-spacing: 3px;
+  font-size: 40px;
+}
+
+nav {
+  margin: 0;
+  background-color: white;
 }
 
 .spacer {
@@ -8,6 +43,7 @@
 }
 
 .footer {
+  text-align: right;
   position: fixed;
   bottom: 0;
   width: 100%;
