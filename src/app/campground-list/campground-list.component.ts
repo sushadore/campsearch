@@ -5,7 +5,7 @@ import { CampgroundService } from './../campground.service';
   selector: 'app-campground-list',
   templateUrl: './campground-list.component.html',
   styleUrls: ['./campground-list.component.css'],
-  // providers: [CampgroundService]
+  providers: [CampgroundService]
 })
 export class CampgroundListComponent implements OnInit {
   apiUrlDetail = 'http://api.amp.active.com/camping/campground/details?contractCode=NRSO&parkId=72382&api_key=49ecq3g6gesegbetsvkpr23r'
