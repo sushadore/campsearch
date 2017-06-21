@@ -29,7 +29,7 @@ export const firebaseConfig = {
     CampgroundListComponent,
     UserComponent,
     CampgroundDetailComponent,
-    AddReviewComponent
+    AddReviewComponent,
     GoogleMapsComponent
   ],
   imports: [
