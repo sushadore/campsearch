@@ -3,8 +3,12 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
 ## CLEANUP
-  * delete unused files :camapgroung model and service,
+  * delete unused files :camapgroung model
   user componenet
+
+#Google Maps
+npm install @agm/core --save
+you may follow the rest of the instructions found here: https://angular-maps.com/guides/getting-started/
 
 # STRETCH GOALS
   * user karma rating
