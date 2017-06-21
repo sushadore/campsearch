@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CampgroundService } from './../campground.service';
+import { campgroundConfig } from './../api-keys';
 
 @Component({
   selector: 'app-campground-list',
@@ -8,13 +10,21 @@ import { CampgroundService } from './../campground.service';
   providers: [CampgroundService]
 })
 export class CampgroundListComponent implements OnInit {
-  apiUrlDetail = 'http://api.amp.active.com/camping/campground/details?contractCode=NRSO&parkId=72382&api_key=49ecq3g6gesegbetsvkpr23r'
-  apiUrlSearch = 'http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=45.5231&landmarkLong=-122.6765&xml=true&api_key=49ecq3g6gesegbetsvkpr23r';
+  apiDetailUrl: string;
+  apiUrlSearch = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=45.5231&landmarkLong=-122.6765&xml=true&api_key=${campgroundConfig.apiKey}`;
   camps;
 
-  constructor(private cs: CampgroundService) { }
+  constructor(
+    private router: Router,
+    private cs: CampgroundService
+  ) { }
 
   ngOnInit() {
+  }
+
+  getCampDetail(campCode: string, campId: string) {
+    console.log('clicked');
+    this.router.navigate(['campgrounds', campCode, campId])
   }
 
   getCamps() {
