@@ -10,11 +10,18 @@
     "karma": 22,
     "email": "yes@yes.com",
     "password": "password1"
-      }, {
+    }, {
     "name": "Camper",
     "photo": ":|",
     "karma": 12,
     "email": "no@no.com",
     "password": "password2"
+  }],
+  "reviews": [{
+    "content": "This place rocks!!!",
+    "rating": "5"
+    },
+    {"content": "This place suck and blows!",
+      "rating": "1"
   }]
 }

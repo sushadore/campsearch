@@ -27,7 +27,6 @@ const appRoutes: Routes = [
    {
     path: 'map',
     component: GoogleMapsComponent
-
   }
  ];
 

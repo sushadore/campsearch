@@ -15,6 +15,7 @@ import { AddReviewComponent } from './add-review/add-review.component';
 import { masterFirebaseConfig, googleMapsConfig } from './api-keys';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,8 +30,9 @@ export const firebaseConfig = {
     CampgroundListComponent,
     UserComponent,
     CampgroundDetailComponent,
-    AddReviewComponent
-    GoogleMapsComponent
+    AddReviewComponent,
+    GoogleMapsComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,

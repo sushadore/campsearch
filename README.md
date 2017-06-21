@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
+## CLEANUP
+  * delete unused files :camapgroung model and service,
+  user componenet
+
 # STRETCH GOALS
   * user karma rating
   * add dispensaries
