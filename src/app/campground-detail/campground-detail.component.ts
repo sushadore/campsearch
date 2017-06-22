@@ -35,7 +35,10 @@ export class CampgroundDetailComponent implements OnInit {
       this.campDetail = data;
       console.log('campDetail: ', this.campDetail);
       console.log('campDetail: ', this.campDetail.address[0].$)
+      console.log('campDetail: ', this.campDetail.photo[0].$)
     });
   }
+
+
 
 }
