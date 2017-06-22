@@ -1,8 +1,8 @@
 .sebm-google-map-container {
   font-family: 'Andika', sans-serif;
-  float: right;
-  height: 300px;
-  width: 100%;
+  position: fixed;
+  height: 600px;
+  width: 75%;
 }
 
 h1, h2, h3, h4 {
