@@ -11,7 +11,7 @@ import { CampgroundService } from './campground.service';
 export class AmenitiesPipe implements PipeTransform {
 
   transform(input: any[], desiredAmenity) {
-    console.log(input);
+    console.log(input[0]);
     // var output: string[] = [];
     // if(desiredAmenity === "Laundry") {
     //   for (var i = 0; i < input.length; i++) {
@@ -20,6 +20,7 @@ export class AmenitiesPipe implements PipeTransform {
     //     }
     //   }
     //   return output;
+    //
     // } else if (desiredAmenity === "Restroom and Showers") {
     //   for (var i = 0; i < input.length; i++) {
     //     if (input[i].includes("Restroom and Showers")) {
@@ -51,6 +52,7 @@ export class AmenitiesPipe implements PipeTransform {
     //       }
     //     }
     //   return output;
+    //
     // } else if (desiredAmenity === "Firewood") {
     //     for (var i = 0; i < input.length; i++) {
     //       if (input[i].includes("Firewood")) {
@@ -58,6 +60,7 @@ export class AmenitiesPipe implements PipeTransform {
     //       }
     //     }
     //   return output;
+    //
     // } else if (desiredAmenity === "Yurt") {
     //     for (var i = 0; i < input.length; i++) {
     //       if (input[i].includes("Yurt")) {
@@ -65,6 +68,7 @@ export class AmenitiesPipe implements PipeTransform {
     //       }
     //     }
     //   return output;
+    //
     // } else if (desiredAmenity === "Yurt") {
     //     for (var i = 0; i < input.length; i++) {
     //       if (input[i].includes("Yurt")) {
@@ -72,6 +76,7 @@ export class AmenitiesPipe implements PipeTransform {
     //       }
     //     }
     //   return output;
+    //
     // } else {
     //   return input;
     // }

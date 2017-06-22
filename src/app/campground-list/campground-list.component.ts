@@ -11,9 +11,7 @@ import { campgroundConfig } from './../api-keys';
 })
 
 export class CampgroundListComponent implements OnChanges {
-  filterByAmenities: string = "Laundry";
-  apiDetailUrl: string;
-  apiUrlSearch = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=45.5231&landmarkLong=-122.6765&xml=true&api_key=${campgroundConfig.apiKey}`;
+  filterByAmenities: string = "All";
   @Input() lat;
   @Input() lng;
   @Output() sendCamps = new EventEmitter();
@@ -27,21 +25,22 @@ export class CampgroundListComponent implements OnChanges {
   ) { }
 
   ngOnChanges() {
-    this.getCamps(this.lat, this.lng);
+    this.getCamps(this.lat, this.lng, this.filterByAmenities);
   }
 
   getCampDetail(campCode: string, campId: string) {
     this.router.navigate(['campgrounds', campCode, campId])
   }
 
-  getCamps(lat: string, lng: string) {
-    this.cs.getCampsApi(lat, lng).subscribe(data => {
+  getCamps(lat: string, lng: string, option: string) {
+    this.cs.getCampsApi(lat, lng, option).subscribe(data => {
       this.camps = data;
       this.sendCamps.emit(this.camps);
     });
   }
 
-  onChange(optionFromMenu) {
-  this.filterByAmenities = optionFromMenu;
-}
+  sortByAmenities(optionFromMenu) {
+    this.filterByAmenities = optionFromMenu;
+    this.getCamps(this.lat, this.lng, this.filterByAmenities);
+  }
 }

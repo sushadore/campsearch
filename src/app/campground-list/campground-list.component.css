@@ -10,3 +10,8 @@ h1, h2, h3, h4 {
 .hidebutneed {
   display: none;
 }
+
+hr {
+  width: 40%;
+  float: left;
+}

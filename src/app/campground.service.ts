@@ -18,8 +18,21 @@ export class CampgroundService {
   ngOnInit() {
   }
 
-  getCampsApi(lat: string, lng: string) {
-    let url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=${lat}&landmarkLong=${lng}&xml=true&api_key=${campgroundConfig.apiKey}`;
+  getCampsApi(lat: string, lng: string, sort: string) {
+    let option: string = '';
+    if (sort == 'pets') {
+      option = "&pets=3010"
+    }
+    if (sort == 'waterfront') {
+      option = "&waterfront=3011"
+    }
+    // if (sort == '') {
+    //   option = ""
+    // }
+    // if (sort == '') {
+    //   option = ""
+    // }
+    let url = `http://api.amp.active.com/camping/campgrounds/?landmarkName=true&landmarkLat=${lat}&landmarkLong=${lng}&xml=true${option}&api_key=${campgroundConfig.apiKey}`;
     return this.http.get(url).map(res => {
       xml2js.parseString( res.text(), (err, result) => {
         this.camps = result.resultset.result; // JSON object!
