@@ -106,4 +106,8 @@ export class GoogleMapsComponent implements OnInit {
     return +s;
   }
 
+  getCampDetail(campCode: string, campId: string) {
+    this.router.navigate(['campgrounds', campCode, campId])
+  }
+
 }
