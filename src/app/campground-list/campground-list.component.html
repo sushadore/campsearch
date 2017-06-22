@@ -2,22 +2,17 @@
 <!-- <h2> Camgrounds matching your criteria </h2>
 <!-- <div *ngFor="let member of members | async" (click)="goToDetailPage(member)"> -->
 <div class="container">
-  <label for="searchByState">State:</label>
-  <select #searchByState>
-    <option value=""></option>
-  </select>
-  <button class="btn btn" (click)="getCamps()">Search</button>
   <select (change)="onChange($event.target.value)">
-      <option value="All">Sort by Amenities</option>
-      <option value="Laundry">Laundry</option>
-      <option value="Restroom and Showers">Restroom and Showers</option>
-      <option value="Cable">Cable</option>
-      <option value="Restrooms">Restrooms</option>
-      <option value="RV Wash">RV Wash</option>
-      <option value="Yurt">Yurt</option>
-      <option value="Tent">Tent Camping</option>
-      <option value="Firewood">Firewood</option>
-    </select>
+    <option value="All">Sort by Amenities</option>
+    <option value="Laundry">Laundry</option>
+    <option value="Restroom and Showers">Restroom and Showers</option>
+    <option value="Cable">Cable</option>
+    <option value="Restrooms">Restrooms</option>
+    <option value="RV Wash">RV Wash</option>
+    <option value="Yurt">Yurt</option>
+    <option value="Tent">Tent Camping</option>
+    <option value="Firewood">Firewood</option>
+  </select>
 
   <div class="panel-body" *ngFor="let camp of camps | async | amenities:filterByAmenities">
     <h2 (click)="getCampDetail(camp.$.contractID, camp.$.facilityID)">{{camp.$.facilityName}}</h2>
