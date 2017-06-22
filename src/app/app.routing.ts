@@ -11,28 +11,16 @@ import { BaseCampComponent }   from './base-camp/base-camp.component';
 
 const appRoutes: Routes = [
   {
-    path: 'campgrounds',
-    component: CampgroundListComponent
-  },
-  {
-    path: 'user',
-    component: UserComponent
-  },
-  {
     path: 'campgrounds/:code/:id',
     component: CampgroundDetailComponent
   },
   {  path: 'add-review',
     component: AddReviewComponent
   },
-   {
-    path: 'map',
-    component: GoogleMapsComponent
-  },
   {
    path: '',
    component: BaseCampComponent
- }
+  }
  ];
 
 NgModule({
