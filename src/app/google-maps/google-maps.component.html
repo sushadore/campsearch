@@ -20,7 +20,7 @@
       <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
         <sebm-google-map-marker *ngFor="let camp of camps" [latitude]="toNumber(camp.$.latitude)" [longitude]="toNumber(camp.$.longitude)">
           <sebm-google-map-info-window>
-            <b (click)="getCampDetail(camp.$.contractID, camp.$.facilityID)">{{camp.$.facilityName}}</b>
+            <b class="link" (click)="getCampDetail(camp.$.contractID, camp.$.facilityID)">{{camp.$.facilityName}}</b>
           </sebm-google-map-info-window>
         </sebm-google-map-marker>
       </sebm-google-map>
