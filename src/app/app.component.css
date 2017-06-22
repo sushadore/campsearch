@@ -5,9 +5,9 @@ nav {
   background-color: #ee7700;
 }
 
-navbar-brand {
-  color: black !important;
-  letter-spacing: 1px;
+.home {
+  margin: 2px;
+  padding: 2px;
 }
 
 h1, h2, h3, h4 {
