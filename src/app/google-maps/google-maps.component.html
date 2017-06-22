@@ -1,36 +1,8 @@
-<p> word </p>
-<sebm-google-map-container>
-  <h1>{{ title }}</h1>
-  <sebm-google-map [latitude]="lat1" [longitude]="lng1" [latitude]="lat2" [longitude]="lng2">
 
-
-    <sebm-google-map-marker [latitude]="lat1" [longitude]="lng1">
-    <sebm-google-map-info-window [disableAutoPan]="true">
-    This is the location of <strong>Kings Cross Station</strong>
-    </sebm-google-map-info-window>
-    </sebm-google-map-marker>
-
-
-    <sebm-google-map-marker [latitude]="lat2" [longitude]="lng2">
-    <sebm-google-map-info-window [disableAutoPan]="true">
-    This is the location of <strong>Covent Garden</strong>
-    </sebm-google-map-info-window>
-    </sebm-google-map-marker>
-
-
-  </sebm-google-map>
-</sebm-google-map-container>
-
-
-<div class='agm-info-window-content'>      <ng-content></ng-content>
-    </div>
-
-    <!-- <div class="container">
-          <h1>Angular 2 + Google Maps Places Autocomplete</h1>
-          <div class="form-group">
-            <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
-          </div>
-          <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-            <sebm-google-map-marker [latitude]="latitude" [longitude]="longitude"></sebm-google-map-marker>
-          </sebm-google-map>
-        </div> -->
+<div>
+  <h1>Angular 2 + Google Maps Places Autocomplete</h1>
+  <div class="form-group">
+    <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+  </div>
+  <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom"></sebm-google-map>
+</div>
