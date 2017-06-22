@@ -2,10 +2,20 @@
   font-family: 'Andika', sans-serif;
   float: right;
   height: 300px;
-  width: 600px;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Amatic SC', cursive;
   font-weight: 600;
+}
+
+.search {
+  text-align: center;
+}
+
+.search input {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
 }

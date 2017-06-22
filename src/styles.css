@@ -1,3 +1,4 @@
+
 body {
   background-color: #F1CD54;
   opacity: .85;
@@ -7,4 +8,7 @@ body {
   color: white;
   letter-spacing: 1px;
   background-color: #BC7E46;
+
+.link:hover {
+  cursor: pointer;
 }
