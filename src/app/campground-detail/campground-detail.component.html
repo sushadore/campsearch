@@ -1,30 +1,29 @@
+<br>
+<br>
+<br>
 <div class="container">
-  <h2>{{campDetail?.$.facility}}</h2>
-  <p>{{campDetail?.$.description}}</p>
-  <p>{{campDetail?.$.webURL}}</p>
-  <p>{{campDetail?.$.nearbyAttrctionDescription}}</p>
-  <p>{{campDetail?.$.recreationDescription}}</p>
-  <p>{{campDetail?.$.drivingDirection}}</p>
-  <p>{{campDetail?.$.facilitiesDescription}}</p>
+
+  <div class="col-md-3" margin1>
+    <h2>{{campDetail?.$.facility}}</h2>
+    <p><strong><em><a target="_blank" href="{{campDetail?.$.webURL}}">visit the website</a></em></strong></p>
+    <p>{{campDetail?.address[0].$.streetAddress}}</p>
+    <p>{{campDetail?.address[0].$.city}}, {{campDetail?.address[0].$.state}}</p> <p>{{campDetail?.address[0].$.country}}</p>
+    <p>{{campDetail?.$.facilitiesDescription}}</p>
+    <p>{{campDetail?.$.recreationDescription}}</p>
+	</div>
+
+	<div class="col-md-9" margin>
+
+    <p><em>About {{campDetail?.$.facility}}</em></p>
+    <p>{{campDetail?.$.description}}</p>
+
+    <p><em>Nearby Attractions</em></p>
+    <p>{{campDetail?.$.nearbyAttrctionDescription}}</p>
+
+    <p><em>Driving Directions</em></p>
+    <p>{{campDetail?.$.drivingDirection}}</p>
+  </div>
+	</div>
 
 
-
-
-
-
-
-
-
-
-
-
-  {{campDetail?.photo}}
-  {{campDetail?.address}}
-  {{campDetail?.amenity}}
-  {{campDetail?.bulletin}}
-  {{campDetail?.contact}}
-  {{campDetail?.address[0].$.streetAddress}} 
-  {{campDetail?.address[0].$.city}},
-  {{campDetail?.address[0].$.state}}
-  {{campDetail?.address[0].$.country}}
-</div>
+<!-- <img src="../../assets/images/marshmallow.png"/> -->

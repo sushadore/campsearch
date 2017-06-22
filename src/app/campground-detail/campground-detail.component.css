@@ -1,5 +1,11 @@
 .container {
   font-family: 'Andika', sans-serif;
+  text-align: center;
+}
+
+.margin {
+  padding: auto;
+  text-align: left;
 }
 
 h1, h2, h3, h4 {
