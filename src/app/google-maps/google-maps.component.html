@@ -10,15 +10,15 @@
   </div>
 
 	<div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
   	  <h3>These campgrounds match your criteria:</h3>
   		<app-campground-list [lat]="latitude" [lng]="longitude" (sendCamps)="getCamps($event)"></app-campground-list>
   	</div>
 
-  	<div class="col-md-6">
+  	<div class="col-md-8">
   	  <h3>Your results mapped:</h3>
       <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
-        <sebm-google-map-marker [iconUrl]="'./../assets/images/tentFIRE.png'" *ngFor="let camp of camps" [latitude]="toNumber(camp.$.latitude)" [longitude]="toNumber(camp.$.longitude)">
+        <sebm-google-map-marker [iconUrl]="'./../assets/images/tentMarker.png'" *ngFor="let camp of camps" [latitude]="toNumber(camp.$.latitude)" [longitude]="toNumber(camp.$.longitude)">
           <sebm-google-map-info-window>
             <b class="link" (click)="getCampDetail(camp.$.contractID, camp.$.facilityID)">{{camp.$.facilityName}}</b>
           </sebm-google-map-info-window>
