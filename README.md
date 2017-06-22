@@ -1,5 +1,7 @@
 # Campsearch
 
+![screenshot](assets/imgages/screen-shot.png)
+
 Campsearch displays campgrounds in a user specified location using Google Map and lists campground details on click. It sorts campgrounds according to pet friendliness and waterfront access.
 
 #### Stretch Goals
