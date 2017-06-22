@@ -34,6 +34,7 @@ export class CampgroundDetailComponent implements OnInit {
     ).subscribe(data => {
       this.campDetail = data;
       console.log('campDetail: ', this.campDetail);
+      console.log('campDetail: ', this.campDetail.address[0].$)
     });
   }
 
