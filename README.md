@@ -1,6 +1,6 @@
 # Campsearch
 
-![screenshot](src/assets/imgages/screen-shot.png)
+![marshmallow](https://user-images.githubusercontent.com/20785654/27458401-b6009eda-575d-11e7-888c-8eb1d9f45296.png)
 
 Campsearch displays campgrounds in a user specified location using Google Map and lists campground details on click. It sorts campgrounds according to pet friendliness and waterfront access.
 
