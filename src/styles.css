@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #F1CD54;
+  opacity: .85;
+}
+
+.btn {
+  color: white;
+  letter-spacing: 1px;
+  background-color: #BC7E46;
+}

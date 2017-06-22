@@ -2,18 +2,18 @@
 <br>
 <br>
 <div class="container">
-
-  <div class="col-md-3" margin1>
-    <h2>{{campDetail?.$.facility}}</h2>
+  <div class="col-md-3">
+    <h1><strong>{{campDetail?.$.facility}}</strong></h1>
     <p><strong><em><a target="_blank" href="{{campDetail?.$.webURL}}">visit the website</a></em></strong></p>
     <p>{{campDetail?.address[0].$.streetAddress}}</p>
     <p>{{campDetail?.address[0].$.city}}, {{campDetail?.address[0].$.state}}</p> <p>{{campDetail?.address[0].$.country}}</p>
+    <p><em>the camp provides:</em></p>
     <p>{{campDetail?.$.facilitiesDescription}}</p>
+    <p><em>and for recreation you'll find:</em></p>
     <p>{{campDetail?.$.recreationDescription}}</p>
 	</div>
 
-	<div class="col-md-9" margin>
-
+	<div class="col-md-9">
     <p><em>About {{campDetail?.$.facility}}</em></p>
     <p>{{campDetail?.$.description}}</p>
 

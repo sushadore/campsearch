@@ -10,6 +10,7 @@ import { campgroundConfig } from './../api-keys';
   providers: [CampgroundService]
 })
 export class CampgroundListComponent implements OnInit {
+  filterByAmenities: string = "Laundry";
   apiDetailUrl: string;
   apiUrlSearch = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=45.5231&landmarkLong=-122.6765&xml=true&api_key=${campgroundConfig.apiKey}`;
   camps;
@@ -32,4 +33,7 @@ export class CampgroundListComponent implements OnInit {
     });
   }
 
+  onChange(optionFromMenu) {
+  this.filterByAmenities = optionFromMenu;
+}
 }
