@@ -1,4 +1,5 @@
 import { Component, NgModule, NgZone, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormControl, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { MapsAPILoader } from 'angular2-google-maps/core';
@@ -12,6 +13,7 @@ import {} from '@types/googlemaps';
   styleUrls: ['./google-maps.component.css']
 })
 export class GoogleMapsComponent implements OnInit {
+  camps;
   allCity = [];
   current_city = null;
   selected_city: string = null;
@@ -36,7 +38,8 @@ export class GoogleMapsComponent implements OnInit {
 
   constructor(
     private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -69,8 +72,9 @@ export class GoogleMapsComponent implements OnInit {
           //set latitude, longitude and zoom
           this.latitude = place.geometry.location.lat();
           this.longitude = place.geometry.location.lng();
-          this.zoom = 12;
+          this.zoom = 8;
         });
+
       });
     });
   }
@@ -80,8 +84,14 @@ export class GoogleMapsComponent implements OnInit {
       navigator.geolocation.getCurrentPosition((position) => {
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
-        this.zoom = 12;
+        this.zoom = 8;
       });
     }
+  }
+
+  getCamps(camps) {
+    this.camps = camps;
+    console.log('lat: ', this.camps[0].$.latitude);
+    console.log('lng: ', this.camps[0].$.longitude);
   }
 }

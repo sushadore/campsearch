@@ -18,7 +18,8 @@ export class CampgroundService {
   ngOnInit() {
   }
 
-  getCampsApi(url) {
+  getCampsApi(lat: string, lng: string) {
+    let url = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=${lat}&landmarkLong=${lng}&xml=true&api_key=${campgroundConfig.apiKey}`;
     return this.http.get(url).map(res => {
       xml2js.parseString( res.text(), (err, result) => {
         this.camps = result.resultset.result; // JSON object!
