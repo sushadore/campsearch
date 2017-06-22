@@ -13,7 +13,7 @@ import {} from '@types/googlemaps';
   styleUrls: ['./google-maps.component.css']
 })
 export class GoogleMapsComponent implements OnInit {
-  camps;
+  camps: any;
   allCity = [];
   current_city = null;
   selected_city: string = null;
@@ -24,7 +24,16 @@ export class GoogleMapsComponent implements OnInit {
   title: string = 'mapit';
   lat1: number = 43.8041;
   lng1: number = -120.5542;
-
+  places = [
+    {
+      lat: 43.8041,
+      lng: -120.5542
+    },
+    {
+      lat: 43.8039,
+      lng: -120.5542
+    }
+  ]
 
   // lat2: number = 51.511899;
   // lng2: number = -0.123270;
@@ -44,9 +53,9 @@ export class GoogleMapsComponent implements OnInit {
 
   ngOnInit() {
     //set google maps defaults
-    this.zoom = 4;
-    this.latitude = 39.8282;
-    this.longitude = -98.5795;
+    this.zoom = 8;
+    this.latitude = 43.8041;
+    this.longitude = -120.5542;
 
     //create search FormControl
     this.searchControl = new FormControl();
@@ -91,7 +100,14 @@ export class GoogleMapsComponent implements OnInit {
 
   getCamps(camps) {
     this.camps = camps;
-    console.log('lat: ', this.camps[0].$.latitude);
-    console.log('lng: ', this.camps[0].$.longitude);
   }
+
+  toNumber(s: string): number {
+    return +s;
+  }
+
+  getCampDetail(campCode: string, campId: string) {
+    this.router.navigate(['campgrounds', campCode, campId])
+  }
+
 }

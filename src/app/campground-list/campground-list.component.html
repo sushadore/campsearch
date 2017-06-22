@@ -3,7 +3,7 @@
 <!-- <div *ngFor="let member of members | async" (click)="goToDetailPage(member)"> -->
 <div class="container">
   <div class="panel-body" *ngFor="let camp of camps">
-    <h2 (click)="getCampDetail(camp.$.contractID, camp.$.facilityID)">{{camp.$.facilityName}}</h2>
+    <h2 class="link" (click)="getCampDetail(camp.$.contractID, camp.$.facilityID)">{{camp.$.facilityName}}</h2>
     <h3>ID: {{camp.$.facilityID}}</h3>
     <h3>Code: {{camp.$.contractID}}</h3>
     <h3>Lat: {{camp.$.latitude}}</h3>
