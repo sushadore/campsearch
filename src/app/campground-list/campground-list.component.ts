@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { CampgroundService } from './../campground.service';
 import { campgroundConfig } from './../api-keys';
@@ -9,9 +9,11 @@ import { campgroundConfig } from './../api-keys';
   styleUrls: ['./campground-list.component.css'],
   providers: [CampgroundService]
 })
-export class CampgroundListComponent implements OnInit {
-  apiDetailUrl: string;
-  apiUrlSearch = `http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=45.5231&landmarkLong=-122.6765&xml=true&api_key=${campgroundConfig.apiKey}`;
+export class CampgroundListComponent implements OnChanges {
+  @Input() lat;
+  @Input() lng;
+  @Output() sendCamps = new EventEmitter();
+
   camps;
 
   constructor(
@@ -19,16 +21,18 @@ export class CampgroundListComponent implements OnInit {
     private cs: CampgroundService
   ) { }
 
-  ngOnInit() {
+  ngOnChanges() {
+    this.getCamps(this.lat, this.lng);
   }
 
   getCampDetail(campCode: string, campId: string) {
     this.router.navigate(['campgrounds', campCode, campId])
   }
 
-  getCamps() {
-    this.cs.getCampsApi(this.apiUrlSearch).subscribe(data => {
+  getCamps(lat: string, lng: string) {
+    this.cs.getCampsApi(lat, lng).subscribe(data => {
       this.camps = data;
+      this.sendCamps.emit(this.camps);
     });
   }
 
