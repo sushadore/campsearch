@@ -30,7 +30,7 @@ Proper installation of:
 ## Installation
 Enable cross-origin resource sharing in Chrome extension
 In terminal:
-  * `git clone https://github.com/callmedw/campgroundSearch`
+  * `git clone https://github.com/sushadore/ng-campSearch.git`
   * `cd campgroundSearch`
   * `nmp install`
   * Open project in text editor and save your api keys in the `api-keys-template.ts` file noting instructions for protecting API keys.
